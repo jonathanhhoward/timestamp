@@ -27,7 +27,8 @@ app.get("/", function (req, res) {
 /**
  * Boilerplate above this code
  */
-require('./timestamp')
+const timestamp = require('./timestamp')
+timestamp()
 /**
  * Boilerplate below this code
  */
