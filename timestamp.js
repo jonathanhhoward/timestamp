@@ -2,10 +2,12 @@ const express = require('express')
 const app = express()
 
 module.exports = function () {
-  return app.get('/api/timestamp/:date_string?', (req, res) => {
-    const date = constructDate(parseUnixOrPass(req.params.date_string))
-    res.json({ unix: date.getTime(), utc: date.toUTCString() })
-  })
+  return function () {
+    app.get('/api/timestamp/:date_string?', (req, res) => {
+      const date = constructDate(parseUnixOrPass(req.params.date_string))
+      res.json({ unix: date.getTime(), utc: date.toUTCString() })
+    })
+  }
 }
 
 function parseUnixOrPass (date_string) {
