@@ -28,7 +28,7 @@ app.get("/", function (req, res) {
  * Boilerplate above this code
  */
 app.get('/api/timestamp/:date_string?', (req, res) => {
-  res.json({unix: new Date().getTime(), utc: ''})
+  res.json({unix: new Date().getTime(), utc: new Date().toUTCString()})
 })
 /**
  * Boilerplate below this code
