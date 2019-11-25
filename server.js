@@ -28,11 +28,11 @@ app.get("/", function (req, res) {
  * Boilerplate above this code
  */
 app.get('/api/timestamp/:date_string?', (req, res) => {
-  const date = constructDate(parseUnixOrUTC(req.params.date_string))
+  const date = constructDate(parseUnixOrPass(req.params.date_string))
   res.json({unix: date.getTime(), utc: date.toUTCString()})
 })
 
-function parseUnixOrUTC(date_string) {
+function parseUnixOrPass(date_string) {
   return /^[0-9]+$/.test(date_string)
     ? Number.parseInt(date_string, 10)
     : date_string
