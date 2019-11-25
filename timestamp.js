@@ -1,5 +1,6 @@
 exports.timestamp = (req, res) => {
   const date = constructDate(parseUnixOrPass(req.params.date_string))
+
   if (date === 'Invalid Date') {
     res.json({ error: 'Invalid Date' })
   } else {

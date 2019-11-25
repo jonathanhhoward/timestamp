@@ -24,14 +24,12 @@ app.get("/", function (req, res) {
 //   res.json({greeting: 'hello API'});
 // });
 
-/**
- * Boilerplate above this code
- */
+// Boilerplate above
+
 const timestamp = require('./timestamp').timestamp
 app.get('/api/timestamp/:date_string?', (req, res) => timestamp(req, res))
-/**
- * Boilerplate below this code
- */
+
+// Boilerplate below
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
