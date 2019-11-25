@@ -8,7 +8,7 @@ exports.timestamp = (req, res) => {
 }
 
 const parseUnixOrPass = (date_string) => {
-  return /^[0-9]+$/.test(date_string)
+  return /^[0-9]{5,}$/.test(date_string)
     ? Number.parseInt(date_string, 10)
     : date_string
 }
