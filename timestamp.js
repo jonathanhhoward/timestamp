@@ -1,6 +1,10 @@
 exports.timestamp = (req, res) => {
   const date = constructDate(parseUnixOrPass(req.params.date_string))
-  res.json({ unix: date.getTime(), utc: date.toUTCString() })
+  if (date === 'Invalid Date') {
+    res.json({ error: 'Invalid Date' })
+  } else {
+    res.json({ unix: date.getTime(), utc: date.toUTCString() })
+  }
 }
 
 const parseUnixOrPass = (date_string) => {
