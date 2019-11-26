@@ -26,8 +26,8 @@ app.get("/", function (req, res) {
 
 // Boilerplate above
 
-const timestamp = require('./timestamp').timestamp
-app.get('/api/timestamp/:date_string?', (req, res) => timestamp(req, res))
+const timestamp = require('./timestamp')
+timestamp(app)
 
 // Boilerplate below
 

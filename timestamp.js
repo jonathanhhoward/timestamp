@@ -1,11 +1,13 @@
-exports.timestamp = (req, res) => {
-  const date = constructDate(parseUnixOrPass(req.params.date_string))
+module.exports = (expressApp) => {
+  expressApp.get('/api/timestamp/:date_string?', (req, res) => {
+    const date = constructDate(parseUnixOrPass(req.params.date_string))
 
-  if (date.getTime()) {
-    res.json({ unix: date.getTime(), utc: date.toUTCString() })
-  } else {
-    res.json({ error: 'Invalid Date' })
-  }
+    if (date.getTime()) {
+      res.json({ unix: date.getTime(), utc: date.toUTCString() })
+    } else {
+      res.json({ error: 'Invalid Date' })
+    }
+  })
 }
 
 const parseUnixOrPass = (date_string) => {
