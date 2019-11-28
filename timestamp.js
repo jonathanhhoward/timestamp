@@ -1,6 +1,6 @@
 const router = require('express').Router()
 
-router.get('/api/timestamp/:date_string?', (req, res) => {
+router.get('/:date_string?', (req, res) => {
   const date = constructDate(parseIntIfUnix(req.params.date_string))
 
   if (date.getTime()) {
