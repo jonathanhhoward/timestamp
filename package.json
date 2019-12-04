@@ -1,17 +1,27 @@
 {
-	"name": "timestamp",
-	"version": "0.1.0",
-	"description": "A timestamp microservice",
-	"main": "server.js",
-	"scripts": {
-		"start": "node server.js"
-	},
-	"dependencies": {
-		"express": "^4.12.4",
-		"cors": "^2.8.0"
-	},
-	"engines": {
-		"node": "12.13.0"
-	},
-	"license": "MIT"
+  "name": "timestamp",
+  "version": "0.1.0",
+  "description": "A timestamp microservice",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "engines": {
+    "node": "12.13.0"
+  },
+  "license": "MIT",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slipskid/timestamp.git"
+  },
+  "author": "Jonathan Howard",
+  "bugs": {
+    "url": "https://github.com/slipskid/timestamp/issues"
+  },
+  "homepage": "https://slipskid-timestamp.glitch.me"
 }
