@@ -17,11 +17,11 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/slipskid/timestamp.git"
+    "url": "git+https://github.com/jonathanhhoward/timestamp.git"
   },
   "author": "Jonathan Howard",
   "bugs": {
-    "url": "https://github.com/slipskid/timestamp/issues"
+    "url": "https://github.com/jonathanhhoward/timestamp/issues"
   },
-  "homepage": "https://slipskid-timestamp.glitch.me"
+  "homepage": "https://jhhoward-timestamp.glitch.me"
 }
